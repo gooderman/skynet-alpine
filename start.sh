@@ -1,5 +1,6 @@
 #!/bin/bash
 echo "---------start skynet---------"
+
 echo $1 $2 
 if [ $# == 0 ]; then
 echo 'ping mysql'
