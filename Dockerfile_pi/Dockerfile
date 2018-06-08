@@ -22,12 +22,12 @@ ENV REMOVE_DEPS \
     readline-dev \
     unzip
 
-COPY ./skynet_package_linux.Makefile ./skynet_package_linux.Makefile
-COPY ./lfs_linux.Makefile ./lfs_linux.Makefile 
-COPY ./lfs_linux_config ./lfs_linux_config 
-COPY ./lua-cjson_linux.Makefile ./lua-cjson_linux.Makefile 
-COPY ./lsqlite3_linux.Makefile ./lsqlite3_linux.Makefile     
-COPY ./skynet_package_diff ./skynet_package_diff
+COPY ../skynet_package_linux.Makefile ./skynet_package_linux.Makefile
+COPY ../lfs_linux.Makefile ./lfs_linux.Makefile 
+COPY ../lfs_linux_config ./lfs_linux_config 
+COPY ../lua-cjson_linux.Makefile ./lua-cjson_linux.Makefile 
+COPY ../lsqlite3_linux.Makefile ./lsqlite3_linux.Makefile     
+COPY ../skynet_package_diff ./skynet_package_diff
 
 RUN  \
 	apk update && yes | apk add --update --no-cache ${SKYNET_DEPS} \
